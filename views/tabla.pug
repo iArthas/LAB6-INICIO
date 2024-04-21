@@ -1,0 +1,25 @@
+doctype html
+html
+ head
+    title Tabla de Multiplicar
+    link(rel="stylesheet", href="/css/styles.css")
+ body
+    .container
+      h1 Tabla de Multiplicar del #{numero}
+      table
+        thead
+          tr
+            th Número
+            th Simbolo
+            th Multiplicador
+            th Simbolo
+            th Resultado
+        tbody
+          each item in tabla
+            tr
+              td #{numero}
+              td X
+              td #{item.multiplicador}
+              
+              td =
+              td #{item.resultado}

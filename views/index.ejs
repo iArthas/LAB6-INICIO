@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mi página dinámica con EJS</title>
+ <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+ <div class="container">
+    <h1>Hola, <%= nombre %>!</h1>
+    <% if (nombre === 'Usuario EJS') { %>
+      <p>¡Bienvenido de vuelta!</p>
+    <% } else { %>
+      <p>¡Hola, nuevo usuario!</p>
+    <% } %>
+    <ul>
+      <% usuarios.forEach(function(usuario) { %>
+        <li><%= usuario.nombre %> (ID: <%= usuario.id %>)</li>
+      <% }); %>
+    </ul>
+ </div>
+ <script src="/js/main.js"></script>
+</body>
+</html>
+
+

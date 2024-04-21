@@ -1,0 +1,14 @@
+doctype html
+html
+ head
+    title Perfil de #{user.nombre}
+    link(rel="stylesheet", href="/css/styles.css")
+ body
+    .container
+      h1 Perfil de #{user.nombre}
+      p ID del usuario: #{user.id}
+      p Edad: #{user.edad} años
+      h2 Intereses
+      ul
+        each interes in user.intereses
+          li= interes

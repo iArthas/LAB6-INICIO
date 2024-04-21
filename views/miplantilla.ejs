@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mi plantilla EJS</title>
+ <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+ <div class="container">
+    <h1>Bienvenido a mi plantilla EJS</h1>
+    <p><%= mensaje %></p>
+    <h2>Tareas</h2>
+    <ul class="task-list">
+      <% tareas.forEach(function(tarea) { %>
+        <li><%= tarea %></li>
+      <% }); %>
+    </ul>
+    <form action="/agregar-tarea" method="post">
+      <input type="text" name="tarea" placeholder="Nueva tarea">
+      <button type="submit">Agregar</button>
+    </form>
+ </div>
+</body>
+</html>

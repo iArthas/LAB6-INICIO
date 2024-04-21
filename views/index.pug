@@ -1,0 +1,17 @@
+doctype html
+html
+ head
+    title Mi página dinámica con Pug
+    link(rel="stylesheet", href="/css/styles.css")
+ body
+    .container
+      h1 Hola, #{nombre}!
+      if nombre === 'Usuario Pug'
+        p ¡Bienvenido de vuelta!
+      else
+        p ¡Hola, nuevo usuario!
+      ul
+        each usuario in usuarios
+          li #{usuario.nombre} (ID: #{usuario.id})
+    script(src="/js/main.js")
+

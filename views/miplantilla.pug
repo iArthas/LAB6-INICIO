@@ -1,0 +1,16 @@
+doctype html
+html
+ head
+    title Mi plantilla Pug
+    link(rel="stylesheet", href="/css/styles.css")
+ body
+    .container
+      h1 Bienvenido a mi plantilla Pug
+      p #{mensaje}
+      h2 Tareas
+      ul
+        each tarea in tareas
+          li= tarea
+      form(action="/agregar-tarea", method="post")
+        input(type="text", name="tarea", placeholder="Nueva tarea")
+        button(type="submit") Agregar
